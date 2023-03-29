@@ -1,0 +1,62 @@
+.fonctionnement{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 400px;
+    padding: 20px;
+
+    & h2{
+        font-size: 24px;
+        font-weight: 700;
+        margin: 20px 0;
+    }
+
+    &__cartes{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: space-around;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+
+        &__etapes{
+            display: flex;
+            justify-content: space-between;
+            width: 90%;
+            padding: 25px 0;
+            background-color: darken(#ffffff, 5);
+            border-radius: 20px;
+            box-shadow: 4px 0px 15px darken(#ffffff, 15);
+
+            & *{
+                position: relative;
+                left: -15px;
+            }
+
+            & i{
+                color: lighten(#000000, 50);
+                font-size: 19px;
+                align-self: center;
+                margin-left: 30px;
+            }
+        }
+
+        &__description{
+            width: 100%;
+            font-size: 16px;
+            font-weight: 500;
+            margin-left: 30px;
+            color: #000000;
+            align-self: center;
+        }
+
+        &__number{
+            background-color: $primary;
+            padding: 4px 8px;
+            border-radius: 20px;
+            color: #ffffff;
+            align-self: center;
+        }
+    }
+}

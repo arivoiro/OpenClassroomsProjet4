@@ -1,0 +1,23 @@
+header{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 7fr 3fr;
+    padding: 30px 0 15px;
+    a{
+        display: flex;
+        grid-column-start: 2;
+        height: 20px;
+        width: 20px;
+        margin-top: 5px;
+        color: #353535;
+        i{
+            font-size: 19px;
+            align-self: center;
+        }
+    }
+    img{
+        grid-column-start: 3;
+        justify-self: center;
+        align-self: center;
+    }
+}

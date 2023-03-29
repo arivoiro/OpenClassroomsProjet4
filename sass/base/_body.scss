@@ -1,0 +1,12 @@
+html{
+    position: relative;
+    min-height: 100%;
+    scroll-behavior: smooth;
+}
+
+body{
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    font-family: $font-text;
+}

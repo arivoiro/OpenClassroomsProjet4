@@ -1,0 +1,14 @@
+button{
+    border: none;
+    cursor: pointer;
+}
+
+.btn{
+    font-size: 16px;
+    background: $btn-color;
+    color: white;
+    padding: 15px 20px;
+    margin: 40px 0 20px;
+    border-radius: 30px;
+    box-shadow: 4px 3px 10px darken(#ffffff, 25);
+}

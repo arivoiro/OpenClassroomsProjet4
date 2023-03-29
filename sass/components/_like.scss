@@ -1,0 +1,32 @@
+/* Home */
+
+.like{
+    position: relative;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    bottom: 50px;
+    left: 85%;
+    & .fa-heart{
+        font-size: 24px;
+        color: transparent;
+        -webkit-text-stroke: 1px black;
+    }
+}
+    
+
+
+/* Restaurants */
+
+.menu button{
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+    background-color: darken(#ffffff, 3.53);
+    & .fa-heart{
+        font-size: 24px;
+        margin: 5px 5px -5px 1px;
+        color: transparent;
+        -webkit-text-stroke: 1px black;
+    }
+}
