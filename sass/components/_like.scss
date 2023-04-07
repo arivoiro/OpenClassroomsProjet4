@@ -7,10 +7,19 @@
     padding: 0;
     bottom: 50px;
     left: 85%;
+    background-color: darken(#ffffff, 3.53);
+
     & .fa-heart{
-        font-size: 24px;
-        color: transparent;
-        -webkit-text-stroke: 1px black;
+        @include heart;
+    }
+    
+    &:hover > .fa-heart{
+        transform: scale(1.1);
+    }
+
+    &:focus > .fa-heart{
+        -webkit-text-stroke-width: 0px;
+        animation: heart 0.2s linear forwards;
     }
 }
     
@@ -24,9 +33,16 @@
     z-index: 1;
     background-color: darken(#ffffff, 3.53);
     & .fa-heart{
-        font-size: 24px;
+        @include heart;
         margin: 5px 5px -5px 1px;
-        color: transparent;
-        -webkit-text-stroke: 1px black;
+    }
+
+    &:hover > .fa-heart{
+        transform: scale(1.1);
+    }
+    
+    &:focus > .fa-heart{
+        -webkit-text-stroke-width: 0px;
+        animation: heart 0.2s linear forwards;
     }
 }

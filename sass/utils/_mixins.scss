@@ -5,3 +5,9 @@
     background-size: cover;
     background-position: center;
 }
+
+@mixin heart{
+    font-size: 24px;
+    color: transparent;
+    -webkit-text-stroke: 1px black;
+}

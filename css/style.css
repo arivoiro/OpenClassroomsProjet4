@@ -1,3 +1,75 @@
+/* Loader */
+@keyframes visibility {
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes text {
+  0% {
+    color: #9356DC;
+  }
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    color: #99E2D0;
+    opacity: 0.3;
+  }
+}
+@keyframes wave {
+  0% {
+    transform: translate(0, 0px);
+  }
+  50% {
+    opacity: 0.3;
+    transform: translate(0, 20px);
+  }
+  100% {
+    transform: translate(0, 0px);
+  }
+}
+/* Menus */
+@keyframes plate-selection {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes apparition {
+  from {
+    opacity: 0;
+    transform: translateY(20%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+/* Heart */
+@keyframes heart {
+  from {
+    transform: scale(1.5);
+    background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+  to {
+    transform: scale(1);
+    background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+}
 *, *:before, *:after {
   box-sizing: border-box;
 }
@@ -76,6 +148,12 @@ button {
   margin: 40px 0 20px;
   border-radius: 30px;
   box-shadow: 4px 3px 10px #bfbfbf;
+  transition: 0.25s;
+}
+.btn:hover, .btn:focus {
+  box-shadow: 8px 6px 10px #a6a6a6;
+  transform: translateY(-4px);
+  opacity: 0.85;
 }
 
 .cards__restaurant .new {
@@ -100,11 +178,19 @@ button {
   padding: 0;
   bottom: 50px;
   left: 85%;
+  background-color: #f6f6f6;
 }
 .like .fa-heart {
   font-size: 24px;
   color: transparent;
   -webkit-text-stroke: 1px black;
+}
+.like:hover > .fa-heart {
+  transform: scale(1.1);
+}
+.like:focus > .fa-heart {
+  -webkit-text-stroke-width: 0px;
+  animation: heart 0.2s linear forwards;
 }
 
 /* Restaurants */
@@ -116,9 +202,16 @@ button {
 }
 .menu button .fa-heart {
   font-size: 24px;
-  margin: 5px 5px -5px 1px;
   color: transparent;
   -webkit-text-stroke: 1px black;
+  margin: 5px 5px -5px 1px;
+}
+.menu button:hover > .fa-heart {
+  transform: scale(1.1);
+}
+.menu button:focus > .fa-heart {
+  -webkit-text-stroke-width: 0px;
+  animation: heart 0.2s linear forwards;
 }
 
 header {
@@ -177,12 +270,12 @@ main {
 
 /* Background */
 .background {
-  background-image: none;
   width: 100%;
   height: 270px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-image: none;
 }
 .background--la-palette-du-gout {
   background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -227,6 +320,8 @@ main {
   align-content: space-between;
   width: 100%;
   height: 250px;
+  opacity: 0;
+  animation: apparition 2s forwards;
 }
 .starter h2, .dessert h2, .dish h2 {
   width: 100%;
@@ -285,8 +380,37 @@ main {
   font-weight: 700;
   font-size: 15px;
 }
+.menu-card .plate-selector {
+  height: 100%;
+  line-height: 65px;
+  width: 0%;
+  font-size: 20px;
+  text-align: center;
+  color: #ffffff;
+  background-color: #99E2D0;
+}
+.menu-card:hover > .plate {
+  width: 75%;
+  transition: width 0.5s;
+}
+.menu-card:hover > .plate-selector {
+  width: 17%;
+  transition: width 0.5s;
+  transition-delay: 0.1s;
+}
+.menu-card:hover > .plate-selector > i {
+  animation: plate-selection 0.6s;
+}
 
 /* Dish, desserts and command button */
+.dish {
+  animation: apparition 2s 0.5s forwards;
+}
+
+.dessert {
+  animation: apparition 2s 1s forwards;
+}
+
 .button {
   display: flex;
   justify-content: center;
@@ -322,6 +446,11 @@ main {
 .recherche__formulaire__icone a i {
   font-size: 16px;
   color: #353535;
+  transition: 0.15s;
+}
+.recherche__formulaire__icone a:hover > i {
+  color: #9356DC;
+  transform: translateY(-2px);
 }
 .recherche__formulaire input[type=text] {
   display: flex;
@@ -332,6 +461,7 @@ main {
   font-size: 16px;
   font-weight: 500;
   border: none;
+  outline: none;
   background-color: #eaeaea;
 }
 
@@ -385,15 +515,23 @@ main {
   border-radius: 20px;
   box-shadow: 4px 0px 15px #d9d9d9;
 }
-.fonctionnement__cartes__etapes * {
+.fonctionnement__cartes__etapes span {
   position: relative;
-  left: -15px;
+  left: -10px;
 }
 .fonctionnement__cartes__etapes i {
+  position: relative;
+  left: -10px;
   color: gray;
   font-size: 19px;
   align-self: center;
   margin-left: 30px;
+}
+.fonctionnement__cartes__etapes:hover {
+  background-color: #f5edff;
+}
+.fonctionnement__cartes__etapes:hover > i {
+  color: #9356DC;
 }
 .fonctionnement__cartes__description {
   width: 100%;
@@ -473,6 +611,46 @@ main {
   height: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  pointer-events: none;
+  animation: visibility 3s ease forwards;
+}
+.loader__text {
+  position: absolute;
+  top: 42%;
+  font-size: 34px;
+  letter-spacing: 1px;
+  animation: text 3s linear infinite;
+}
+.loader__dot {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  margin-right: 8px;
+  animation: wave 1.8s infinite;
+}
+.loader__dot:nth-child(3n+1) {
+  background: #9356DC;
+  animation-delay: 0.2s;
+}
+.loader__dot:nth-child(3n+2) {
+  background: #FF79DA;
+  animation-delay: 0.4s;
+}
+.loader__dot:nth-child(3n+3) {
+  background: #99E2D0;
+  animation-delay: 0.6s;
 }
 
 /*# sourceMappingURL=style.css.map */

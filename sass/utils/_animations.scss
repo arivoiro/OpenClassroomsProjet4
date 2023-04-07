@@ -1,0 +1,81 @@
+/* Loader */
+
+@keyframes visibility {
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes text {
+    0% { 
+        color: $primary; 
+    }
+    50% { 
+        color: $secondary;
+    }
+    100% { 
+        color: $tertiary; 
+        opacity: 0.3;
+    }
+}
+
+@keyframes wave {
+    0% {
+      transform: translate(0, 0px);
+    }
+    50% {
+      opacity: 0.3;
+      transform: translate(0, 20px);
+    }
+    100% {
+      transform: translate(0, 0px);
+    }
+}
+
+/* Menus */
+
+@keyframes plate-selection {
+    0% { 
+        transform: rotate(0deg);
+    }
+    50% { 
+        transform: rotate(180deg);
+    }
+    100% { 
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes apparition {
+    from { 
+        opacity: 0;
+        transform: translateY(20%) ;
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0%) ;
+    }
+}
+
+/* Heart */
+
+@keyframes heart{
+    from{
+        transform: scale(1.5);
+        background: -webkit-linear-gradient(top, $primary, $secondary);
+        background-clip:text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    to{
+        transform: scale(1);
+        background: -webkit-linear-gradient(top, $primary, $secondary);
+        background-clip:text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+}

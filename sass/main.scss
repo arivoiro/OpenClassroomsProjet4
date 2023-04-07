@@ -1,6 +1,7 @@
 @import "utils/variables";
 @import "utils/breakpoints";
 @import "utils/mixins";
+@import "utils/animations";
 
 @import "base/reset";
 @import "base/body";
@@ -16,3 +17,4 @@
 @import "pages/home";
 @import "pages/fonctionnement";
 @import "pages/restaurants";
+@import "pages/loader";
