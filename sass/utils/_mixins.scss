@@ -4,6 +4,18 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+
+    @include tablet {
+        height: 321px;
+    }
+
+    @include laptop {
+        height: 372px;
+    }
+
+    @include desktop {
+        height: 423px;
+    }
 }
 
 @mixin heart{

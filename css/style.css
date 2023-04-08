@@ -56,18 +56,20 @@
 /* Heart */
 @keyframes heart {
   from {
-    transform: scale(1.5);
     background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    background-repeat: no-repeat;
+    background-position-y: 20px;
   }
   to {
-    transform: scale(1);
     background: -webkit-linear-gradient(top, #9356DC, #FF79DA);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
+    background-repeat: no-repeat;
+    background-position-y: 0;
   }
 }
 *, *:before, *:after {
@@ -131,6 +133,8 @@ html {
 body {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
+  min-height: 100vh;
   height: 100%;
   font-family: "Roboto", sans-serif;
 }
@@ -145,7 +149,7 @@ button {
   background: linear-gradient(to top left, #9356DC, 55%, #FF79DA);
   color: white;
   padding: 15px 20px;
-  margin: 40px 0 20px;
+  margin: 40px 0 0;
   border-radius: 30px;
   box-shadow: 4px 3px 10px #bfbfbf;
   transition: 0.25s;
@@ -186,9 +190,6 @@ button {
   -webkit-text-stroke: 1px black;
 }
 .like:hover > .fa-heart {
-  transform: scale(1.1);
-}
-.like:focus > .fa-heart {
   -webkit-text-stroke-width: 0px;
   animation: heart 0.2s linear forwards;
 }
@@ -204,12 +205,8 @@ button {
   font-size: 24px;
   color: transparent;
   -webkit-text-stroke: 1px black;
-  margin: 5px 5px -5px 1px;
 }
 .menu button:hover > .fa-heart {
-  transform: scale(1.1);
-}
-.menu button:focus > .fa-heart {
   -webkit-text-stroke-width: 0px;
   animation: heart 0.2s linear forwards;
 }
@@ -242,6 +239,15 @@ footer {
   width: 100%;
   background-color: #353535;
   padding: 20px 15px 30px 25px;
+  margin-top: auto;
+}
+@media screen and (min-width: 1280px) {
+  footer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 30px;
+  }
 }
 footer h4 {
   color: white;
@@ -249,17 +255,31 @@ footer h4 {
   font-size: 18px;
   padding-bottom: 15px;
 }
-footer li {
+@media screen and (min-width: 1280px) {
+  footer h4 {
+    padding-bottom: 0;
+    padding-right: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    width: 66%;
+    justify-content: space-evenly;
+  }
+}
+footer ul li {
   padding: 5px 0;
 }
-footer li a {
+footer ul li a {
   color: white;
   font-size: 16px;
 }
-footer li a i {
+footer ul li a i {
   padding-right: 10px;
 }
-footer li .partenaire i {
+footer ul li .partenaire i {
   font-size: 13px;
   padding-right: 8px;
 }
@@ -276,6 +296,21 @@ main {
   background-size: cover;
   background-position: center;
   background-image: none;
+}
+@media screen and (min-width: 768px) {
+  .background {
+    height: 321px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .background {
+    height: 372px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .background {
+    height: 423px;
+  }
 }
 .background--la-palette-du-gout {
   background-image: url(../../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
@@ -297,16 +332,37 @@ main {
   justify-content: space-between;
   align-content: space-between;
   width: 100%;
+  max-width: 1055px;
   height: 1100px;
   background-color: #f6f6f6;
   border-radius: 30px 30px 0 0;
   padding: 20px 20px 50px;
-  margin-top: -55px;
+  margin: -55px auto 0 auto;
+}
+.menu__title {
+  display: inline-flex;
+  width: 307px;
+  margin: 30px auto 0;
+}
+@media screen and (min-width: 768px) {
+  .menu__title {
+    width: 38%;
+  }
 }
 .menu h1 {
-  width: 80%;
+  width: 90%;
   font-family: "Shrikhand";
   font-size: 28px;
+}
+@media screen and (min-width: 768px) {
+  .menu h1 {
+    text-align: center;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .menu h1 {
+    width: 70%;
+  }
 }
 .menu--la-note-enchantee {
   height: 1170px;
@@ -319,6 +375,8 @@ main {
   justify-content: space-between;
   align-content: space-between;
   width: 100%;
+  max-width: 634px;
+  margin: auto;
   height: 250px;
   opacity: 0;
   animation: apparition 2s forwards;
@@ -478,7 +536,12 @@ main {
   width: 75%;
   font-size: 24px;
   font-weight: 700;
-  margin-bottom: 15px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1280px) {
+  .site-description h1 {
+    font-size: 40px;
+  }
 }
 .site-description p {
   font-size: 18px;
@@ -491,6 +554,13 @@ main {
   width: 100%;
   height: 400px;
   padding: 20px;
+}
+@media screen and (min-width: 1280px) {
+  .fonctionnement {
+    height: 250px;
+    width: 75%;
+    margin: auto;
+  }
 }
 .fonctionnement h2 {
   font-size: 24px;
@@ -506,6 +576,11 @@ main {
   width: 100%;
   height: 100%;
 }
+@media screen and (min-width: 1280px) {
+  .fonctionnement__cartes {
+    justify-content: space-around;
+  }
+}
 .fonctionnement__cartes__etapes {
   display: flex;
   justify-content: space-between;
@@ -514,6 +589,11 @@ main {
   background-color: #f2f2f2;
   border-radius: 20px;
   box-shadow: 4px 0px 15px #d9d9d9;
+}
+@media screen and (min-width: 1280px) {
+  .fonctionnement__cartes__etapes {
+    width: 30%;
+  }
 }
 .fonctionnement__cartes__etapes span {
   position: relative;
@@ -561,6 +641,12 @@ main {
   font-weight: 700;
   margin: 20px 0;
 }
+@media screen and (min-width: 1280px) {
+  .restaurants h2 {
+    width: 75%;
+    margin: 40px auto 30px;
+  }
+}
 
 .cards {
   display: flex;
@@ -570,6 +656,18 @@ main {
   width: 100%;
   height: 1100px;
 }
+@media screen and (min-width: 768px) {
+  .cards {
+    height: 530px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards {
+    height: 250px;
+    width: 85%;
+    margin: auto;
+  }
+}
 .cards__restaurant {
   display: flex;
   flex-direction: column;
@@ -577,6 +675,21 @@ main {
   height: 250px;
   box-shadow: 0px 3px 15px #e6e6e6;
   border-radius: 20px;
+  transition: 0.2s;
+}
+@media screen and (min-width: 768px) {
+  .cards__restaurant {
+    width: 48%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards__restaurant {
+    width: 23%;
+  }
+  .cards__restaurant:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 5px 15px #d9d9d9;
+  }
 }
 .cards__restaurant__link {
   width: 100%;

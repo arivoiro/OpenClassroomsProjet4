@@ -2,24 +2,49 @@ footer{
     width: 100%;
     background-color: #353535;
     padding: 20px 15px 30px 25px;
+    margin-top: auto;
+
+    @include desktop{
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        padding: 30px;
+    }
+
     h4{
         color: white;
         font-family: $font-title;
         font-size: 18px;
         padding-bottom: 15px;
-    }
-    & li{
-        padding: 5px 0;
-        & a{
-            color: white;
-            font-size: 16px;
-            & i{
-                padding-right: 10px;
-            }
+
+        @include desktop{
+            padding-bottom: 0;
+            padding-right: 100px;
         }
-        & .partenaire i{
-            font-size: 13px;
-            padding-right: 8px;
+    }
+
+    & ul {
+
+        @include desktop{
+            display: flex;
+            flex-direction: row;
+            width: 66%;
+            justify-content: space-evenly;
+        }
+
+        & li{
+            padding: 5px 0;
+            & a{
+                color: white;
+                font-size: 16px;
+                & i{
+                    padding-right: 10px;
+                }
+            }
+            & .partenaire i{
+                font-size: 13px;
+                padding-right: 8px;
+            }
         }
     }
 }

@@ -64,18 +64,20 @@
 
 @keyframes heart{
     from{
-        transform: scale(1.5);
         background: -webkit-linear-gradient(top, $primary, $secondary);
         background-clip:text;
         -webkit-background-clip: text;
         color: transparent;
+        background-repeat: no-repeat;
+        background-position-y: 20px;
     }
 
     to{
-        transform: scale(1);
         background: -webkit-linear-gradient(top, $primary, $secondary);
         background-clip:text;
         -webkit-background-clip: text;
         color: transparent;
+        background-repeat: no-repeat;
+        background-position-y: 0;
     }
 }

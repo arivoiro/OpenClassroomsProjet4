@@ -29,22 +29,42 @@ main{
 
 /* Menu */
 
+
 .menu{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: space-between;
     width: 100%;
+    max-width: 1055px;
     height: 1100px;
     background-color: darken(#ffffff, 3.53);
     border-radius: 30px 30px 0 0;
     padding: 20px 20px 50px;
-    margin-top: -55px;
+    margin: -55px auto 0 auto;
+
+    &__title {
+        display: inline-flex;
+        width: 307px;
+        margin: 30px auto 0;
+
+        @include tablet {
+            width: 38%;
+        }
+    }
 
     & h1{
-        width: 80%;
+        width: 90%;
         font-family: $font-title;
         font-size: 28px;
+
+        @include tablet {
+            text-align: center;
+        }
+
+        @include laptop {
+            width: 70%;
+        }
     }
 
     &--la-note-enchantee {
@@ -60,6 +80,8 @@ main{
     justify-content: space-between;
     align-content: space-between;
     width: 100%;
+    max-width: 634px;
+    margin: auto;
     height: 250px;
     opacity: 0;
     animation: apparition 2s forwards;
