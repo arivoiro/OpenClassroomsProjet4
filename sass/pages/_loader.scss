@@ -19,7 +19,7 @@
             animation: text 3s linear infinite;
         }
 
-        &__dot {
+        &__dot{
             width: 20px;
             height: 20px;
             display: inline-block;
@@ -27,8 +27,8 @@
             margin-right: 8px;
             animation: wave 1.8s infinite;
 
-            @for $i from 1 through length($loading-colors) {
-                &:nth-child(#{length($loading-colors)}n + #{$i}) {
+            @for $i from 1 through length($loading-colors){
+                &:nth-child(#{$i}) {
                     background: nth($loading-colors, $i);
                     animation-delay: 0.2s * $i;
                     }

@@ -154,7 +154,7 @@ button {
   box-shadow: 4px 3px 10px #bfbfbf;
   transition: 0.25s;
 }
-.btn:hover, .btn:focus {
+.btn:hover {
   box-shadow: 8px 6px 10px #a6a6a6;
   transform: translateY(-4px);
   opacity: 0.85;
@@ -171,17 +171,35 @@ button {
   text-align: center;
   border-radius: 2px;
   bottom: 220px;
-  left: 75%;
+  left: 70%;
+}
+@media screen and (min-width: 425px) {
+  .cards__restaurant .new {
+    left: 80%;
+  }
+}
+@media screen and (min-width: 576px) {
+  .cards__restaurant .new {
+    left: 85%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cards__restaurant .new {
+    left: 75%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .cards__restaurant .new {
+    left: 80%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .cards__restaurant .new {
+    left: 65%;
+  }
 }
 
-/* Home */
 .like {
-  position: relative;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  bottom: 50px;
-  left: 85%;
   background-color: #f6f6f6;
 }
 .like .fa-heart {
@@ -191,24 +209,7 @@ button {
 }
 .like:hover > .fa-heart {
   -webkit-text-stroke-width: 0px;
-  animation: heart 0.2s linear forwards;
-}
-
-/* Restaurants */
-.menu button {
-  overflow: hidden;
-  position: relative;
-  z-index: 1;
-  background-color: #f6f6f6;
-}
-.menu button .fa-heart {
-  font-size: 24px;
-  color: transparent;
-  -webkit-text-stroke: 1px black;
-}
-.menu button:hover > .fa-heart {
-  -webkit-text-stroke-width: 0px;
-  animation: heart 0.2s linear forwards;
+  animation: heart 0.25s linear forwards;
 }
 
 header {
@@ -265,8 +266,9 @@ footer h4 {
   footer ul {
     display: flex;
     flex-direction: row;
-    width: 66%;
+    width: 60%;
     justify-content: space-evenly;
+    align-items: center;
   }
 }
 footer ul li {
@@ -584,7 +586,7 @@ main {
 .fonctionnement__cartes__etapes {
   display: flex;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   padding: 25px 0;
   background-color: #f2f2f2;
   border-radius: 20px;
@@ -597,15 +599,14 @@ main {
 }
 .fonctionnement__cartes__etapes span {
   position: relative;
-  left: -10px;
+  right: 10px;
 }
 .fonctionnement__cartes__etapes i {
   position: relative;
-  left: -10px;
   color: gray;
   font-size: 19px;
   align-self: center;
-  margin-left: 30px;
+  margin-left: 10px;
 }
 .fonctionnement__cartes__etapes:hover {
   background-color: #f5edff;
@@ -617,8 +618,7 @@ main {
   width: 100%;
   font-size: 16px;
   font-weight: 500;
-  margin-left: 30px;
-  color: #000000;
+  margin-left: 40px;
   align-self: center;
 }
 .fonctionnement__cartes__number {
@@ -712,6 +712,14 @@ main {
   font-size: 16px;
   margin-top: 5px;
 }
+.cards .like {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  bottom: 50px;
+  left: 85%;
+}
 
 .image {
   width: 100%;
@@ -753,15 +761,15 @@ main {
   margin-right: 8px;
   animation: wave 1.8s infinite;
 }
-.loader__dot:nth-child(3n+1) {
+.loader__dot:nth-child(1) {
   background: #9356DC;
   animation-delay: 0.2s;
 }
-.loader__dot:nth-child(3n+2) {
+.loader__dot:nth-child(2) {
   background: #FF79DA;
   animation-delay: 0.4s;
 }
-.loader__dot:nth-child(3n+3) {
+.loader__dot:nth-child(3) {
   background: #99E2D0;
   animation-delay: 0.6s;
 }

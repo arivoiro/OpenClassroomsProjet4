@@ -64,7 +64,7 @@
 
 @keyframes heart{
     from{
-        background: -webkit-linear-gradient(top, $primary, $secondary);
+        background: $heart-color;
         background-clip:text;
         -webkit-background-clip: text;
         color: transparent;
@@ -73,7 +73,7 @@
     }
 
     to{
-        background: -webkit-linear-gradient(top, $primary, $secondary);
+        background: $heart-color;
         background-clip:text;
         -webkit-background-clip: text;
         color: transparent;
