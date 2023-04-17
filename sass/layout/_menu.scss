@@ -47,6 +47,7 @@ main{
         display: inline-flex;
         width: 307px;
         margin: 30px auto 0;
+        white-space: nowrap;
 
         @include tablet{
             width: 38%;
@@ -63,7 +64,7 @@ main{
         }
 
         @include laptop{
-            width: 70%;
+            width: 75%;
         }
     }
 
@@ -84,7 +85,7 @@ main{
     margin: auto;
     height: 250px;
     opacity: 0;
-    animation: apparition 2s forwards;
+    animation: apparition 1s forwards;
 
     & h2{
         width: 100%;
@@ -182,12 +183,12 @@ main{
 
 .dish{
     @extend .starter;
-    animation: apparition 2s 0.5s forwards;
+    animation: apparition 1s 0.5s forwards;
 }
 
 .dessert{
     @extend .starter;
-    animation: apparition 2s 1s forwards;
+    animation: apparition 1s 1s forwards;
 }
 
 .button{
