@@ -448,10 +448,15 @@ main {
 .menu-card .plate h3 {
   width: 85%;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 16px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media screen and (min-width: 350px) {
+  .menu-card .plate h3 {
+    font-size: 18px;
+  }
 }
 .menu-card .plate__details {
   width: 85%;
