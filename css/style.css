@@ -457,10 +457,15 @@ main {
   width: 85%;
   height: 25px;
   font-weight: 300;
-  font-size: 15px;
+  font-size: 14px;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
+}
+@media screen and (min-width: 350px) {
+  .menu-card .plate__details {
+    font-size: 15px;
+  }
 }
 .menu-card .plate__price {
   width: 10%;
