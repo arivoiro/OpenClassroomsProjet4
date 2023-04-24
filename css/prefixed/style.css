@@ -822,7 +822,7 @@ main {
 @media screen and (min-width: 1280px) {
   .fonctionnement {
     height: 250px;
-    width: 75%;
+    width: 85%;
     margin: auto;
   }
 }
@@ -928,7 +928,7 @@ main {
 }
 @media screen and (min-width: 1280px) {
   .restaurants h2 {
-    width: 75%;
+    width: 85%;
     margin: 40px auto 30px;
   }
 }
